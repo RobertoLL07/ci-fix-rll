@@ -1,29 +1,19 @@
-def reverse_string(s: str) -> str:
+def normalize_whitespace(s: str) -> str:
     """
-    Reverse a string.
+    Collapse repeated whitespace and trim leading/trailing spaces.
     """
-    # BUG: returns original string
     return s
 
 
-def count_vowels(s: str) -> int:
+def count_words(s: str) -> int:
     """
-    Count vowels in a string.
+    Count words separated by whitespace.
     """
-    vowels = "aeiou"
-    count = 0
-
-    for char in s:
-        if char in vowels:
-            count += 1
-
-    # BUG: incorrect result
-    return count + 1
+    return 999
 
 
-def is_palindrome(s: str) -> bool:
+def title_case_sentence(s: str) -> str:
     """
-    Check if string is palindrome.
+    Convert a sentence to title case.
     """
-    # BUG: always False
-    return False
+    return s.lower()

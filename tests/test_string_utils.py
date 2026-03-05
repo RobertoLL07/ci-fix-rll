@@ -1,17 +1,17 @@
-from src.string_utils import reverse_string, count_vowels, is_palindrome
+from src.string_utils import normalize_whitespace, count_words, title_case_sentence
 
 
-def test_reverse_string():
-    assert reverse_string("abc") == "cba"
+def test_normalize_whitespace():
+    assert normalize_whitespace("  hello   world\tfrom\npython  ") == "hello world from python"
 
 
-def test_count_vowels():
-    assert count_vowels("hello") == 2
+def test_count_words():
+    assert count_words("hello world from python") == 4
 
 
-def test_palindrome_true():
-    assert is_palindrome("level") is True
+def test_count_words_empty():
+    assert count_words("") == 0
 
 
-def test_palindrome_false():
-    assert is_palindrome("python") is False
+def test_title_case_sentence():
+    assert title_case_sentence("welcome to string utilities") == "Welcome To String Utilities"
