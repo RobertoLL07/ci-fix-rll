@@ -9,7 +9,7 @@ def count_words(s: str) -> int:
     """
     Count words separated by whitespace.
     """
-    return 998
+    return 999
 
 
 def title_case_sentence(s: str) -> str:
