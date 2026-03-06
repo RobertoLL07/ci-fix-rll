@@ -1,6 +1,6 @@
-# CI Autofix challenge
+# CI Autofix Assignment
 
-This repo is designed for the challenge of the first class:
+This repo is designed for the Assignment of the first class:
 - GitHub Actions CI
 - Codex CLI custom commands
 - “Skills” as reusable workflow specs
