@@ -1,0 +1,62 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+__________________________ test_normalize_whitespace ___________________________
+
+    def test_normalize_whitespace():
+>       assert normalize_whitespace("  hello   coding\tagents\n101  ") == "hello coding agents 101"
+E       AssertionError: assert '  hello   co...agents\n101  ' == 'hello coding agents 101'
+E         
+E         - hello coding agents 101
+E         ?             ^      ^^^^
+E         +   hello   coding	agents
+E         ? ++     ++       ^      ^
+E         + 101
+
+tests/test_string_utils.py:5: AssertionError
+_______________________________ test_count_words _______________________________
+
+    def test_count_words():
+>       assert count_words("hello coding agents 101") == 4
+E       AssertionError: assert 998 == 4
+E        +  where 998 = count_words('hello coding agents 101')
+
+tests/test_string_utils.py:9: AssertionError
+____________________________ test_count_words_empty ____________________________
+
+    def test_count_words_empty():
+>       assert count_words("") == 0
+E       AssertionError: assert 998 == 0
+E        +  where 998 = count_words('')
+
+tests/test_string_utils.py:13: AssertionError
+___________________________ test_title_case_sentence ___________________________
+
+    def test_title_case_sentence():
+>       assert title_case_sentence("welcome to coding agents") == "Welcome To Coding Agents"
+E       AssertionError: assert 'welcome to coding agents' == 'Welcome To Coding Agents'
+E         
+E         - Welcome To Coding Agents
+E         ? ^       ^  ^      ^
+E         + welcome to coding agents
+E         ? ^       ^  ^      ^
+
+tests/test_string_utils.py:17: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_string_utils.py::test_normalize_whitespace - AssertionError: assert '  hello   co...agents\n101  ' == 'hello coding agents 101'
+  
+  - hello coding agents 101
+  ?             ^      ^^^^
+  +   hello   coding	agents
+  ? ++     ++       ^      ^
+  + 101
+FAILED tests/test_string_utils.py::test_count_words - AssertionError: assert 998 == 4
+ +  where 998 = count_words('hello coding agents 101')
+FAILED tests/test_string_utils.py::test_count_words_empty - AssertionError: assert 998 == 0
+ +  where 998 = count_words('')
+FAILED tests/test_string_utils.py::test_title_case_sentence - AssertionError: assert 'welcome to coding agents' == 'Welcome To Coding Agents'
+  
+  - Welcome To Coding Agents
+  ? ^       ^  ^      ^
+  + welcome to coding agents
+  ? ^       ^  ^      ^
+4 failed in 0.03s
